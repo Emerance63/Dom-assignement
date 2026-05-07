@@ -33,7 +33,7 @@
     </header>
 <section>
     <div class="p-6 text-center">
-        <h1 id="text" class="text-3xl md:m-10 lg:m-20">Things to Explore and know in rwanda </h1>
+        <h1 id="text" class="text-3xl font-bold md:m-10 lg:m-20">Things to Explore and know in rwanda </h1>
         <button  id="changeText"class="bg-green-600 text-white px-4 py-2 rounded ml-2 mb-2">Change Text</button>
 <p id="about"lass="flex md:justify-center"> <em class="text-bold">Rwanda </em>is a beautiful country located in East Africa and
      is known as the “Land of a Thousand Hills” because of its
@@ -103,6 +103,13 @@ const navMenu = document.getElementById("navMenu");
 
 menuBtn.addEventListener("click", function () {
     navMenu.classList.toggle("hidden")
+})
+
+const text = document.getElementById("text");
+const changeText =document.getElementById("changeText");
+
+changeText.addEventListener("click", function () {
+    text.innerText = "Welcome to rwanda.";
 })
 
 </script>
