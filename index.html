@@ -112,6 +112,15 @@ changeText.addEventListener("click", function () {
     text.innerText = "Welcome to rwanda.";
 })
 
+const toggleMode = document.getElementById("toggleMode");
+const Body = document.getElementById("body");
+
+toggleMode.addEventListener("click", function (){
+Body.classList.toggle("bg-black");
+Body.classList.toggle("text-white");
+
+})
+
 </script>
 </body>
 </html>
