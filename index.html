@@ -9,35 +9,51 @@
 <body class="bg-white text-black transtition duration-300" id="body">
     <header class="bg-gray-900 text-white p-4">
         <nav class="flex justify-between items-center">
+
             <h1 class="text-xl font-bold">My Project</h1>
+
             <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
+
             <ul id="navMenu"class="hidden lg:flex gap-6 items-center"> 
-                <li><a class="nav-link hover:blue-700">Home</a></li>
-                <li><a class="nav-link hover:blue-700">About</a></li>
+                <li><a class="nav-link hover:text-green-700">Home</a></li>
+                <li><a class="nav-link hover:text-green-700" href="#about">About</a></li>
+
                <li class="relative"><a>
-                <button class="nav-link hover:blue-700" id="dropdownBtn">Services</button>
+                <button class="nav-link hover:text-green-700" id="dropdownBtn">Services</button>
                 <ul id="dropdown" class="hidden absolute bg-gray-800 mt-2 p-2 rounded">
-                    <li class="p-2 hover:bg-gray-700">Design</li>
-                    <li class="p-2 hover:bg-gray-700">Development</li>
+                    <li class="p-2 hover:text-gray-700">Design</li>
+                    <li class="p-2 hover:text-gray-700">Development</li>
                 </ul>
             </a></li>
-            <li><a class="nav-link hover:blue-700">Contact</a></li>
+
+            <li><a class="nav-link hover:text-green-700">Contact</a></li>
             </ul>
             <button id="toggleMode" class="bg-gray-800 text-white px-4 py-2 mt-3 rounded ml-3">Toggle </button>
         </nav>
     </header>
 <section>
-    <div>
-        <p>Things to Explore and eat</p>
-        <button>Change Text</button>
+    <div class="p-6 text-center">
+        <h1 id="text" class="text-3xl md:m-10 lg:m-20">Things to Explore and know in rwanda </h1>
+        <button  id="changeText"class="bg-green-600 text-white px-4 py-2 rounded ml-2 mb-2">Change Text</button>
+<p id="about"lass="flex md:justify-center"> <em class="text-bold">Rwanda </em>is a beautiful country located in East Africa and
+     is known as the “Land of a Thousand Hills” because of its
+      many green hills and mountains. The country is famous for
+       its cleanliness, safety, wildlife, and rapid development. Its 
+       capital city, Kigali, is one of the cleanest and most modern 
+       cities in Africa. Rwanda is well known for tourism attractions
+       such as gorilla trekking in Volcanoes National Park, safaris in 
+       Akagera National Park, and beautiful views at Lake Kivu. The people
+        of Rwanda are friendly and value peace, unity, and culture. Rwanda is
+         also known for traditional foods, coffee, tea, and cultural dances that
+          attract visitors from around the world.</p>
     </div>
-    <div>
-        <input type="text"placeholder="Enter something....">
-        <button>Add</button>
+    <div class="p-6 text-center">
+        <input type="text"placeholder="Enter something...."  class="border p-2 rounded w-full max-w-md">
+        <button id="addText" class="bg-green-600 text-white px-4 py-2 rounded ml-2">Add</button>
         <ul id="list" class="p-6 space-y-2 text-center"></ul>
     </div>
-    <div>
-        <input type="text" placeholder="search List....">
+    <div class="p-6 text-center">
+        <input type="text" placeholder="search List...."  class="border p-2 rounded w-full max-w-md">
         <ul id="itemlist" class="p-6 space-y-2 text-center">
             <li>Kigali Convention Centre</li>
             <li>Nyandungu Eco Park</li>
@@ -50,26 +66,26 @@
         <div class="border p-4 rounded">
             <h3 class="font-bold">Kigali Convention Centre</h3>
             <p></p>
-            <button>Add</button>
+            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
         </div>
         <div class="border p-4 rounded" >
             <h3 class="font-bold">Nyandungu Eco Park</h3>
             <p></p>
-            <button class="addCard bg-blue-500 text-white px-3 py-1 mt-2">Add</button>
+            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
         </div>
         <div class="border p-4 rounded">
             <h3 class="font-bold">Kigali Genocide Memorial</h3>
             <p></p>
-            <button class="addCard bg-blue-500 text-white px-3 py-1 mt-2">Add</button>
+            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
         </div>
         <div class="border p-4 rounded">
             <h3 class="font-bold">Volcanoes National Park</h3>
             <p></p>
-            <button class="addCard bg-blue-500 text-white px-3 py-1 mt-2">Add</button>
+            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
         </div>
     </div>
 </section>
-<footer>
+<footer class="bg-gray-900 text-white p-6 text-center">
     @2026   My project
 </footer>
 </body>
