@@ -53,14 +53,22 @@
         <ul id="list" class="p-6 space-y-2 text-center"></ul>
     </div>
     <div class="p-6 text-center">
-        <input type="text" placeholder="search List...."  class="border p-2 rounded w-full max-w-md">
-        <ul id="itemlist" class="p-6 space-y-2 text-center">
-            <li>Kigali Convention Centre</li>
-            <li>Nyandungu Eco Park</li>
-            <li>Kigali Genocide Memorial</li>
-            <li>Volcanoes National Park</li>
-            <li>Nyungwe Forest National Park</li>
-        </ul>
+        <input id="search" type="text" placeholder="search List...."  
+class="border p-2 rounded w-full max-w-md">
+
+<button 
+id="searchBtn"
+class="bg-green-600 text-white px-3 py-2 rounded">
+Search
+</button>
+
+<ul id="itemul" class="p-6 space-y-2 text-center">
+    <li class="itemlist">Kigali Convention Centre</li>
+    <li class="itemlist">Nyandungu Eco Park</li>
+    <li class="itemlist">Kigali Genocide Memorial</li>
+    <li class="itemlist">Volcanoes National Park</li>
+    <li class="itemlist">Nyungwe Forest National Park</li>
+</ul>
     </div>
     <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" >
         <div class="border p-4 rounded">
@@ -120,6 +128,30 @@ Body.classList.toggle("bg-black");
 Body.classList.toggle("text-white");
 
 })
+
+const Search = document.getElementById("search");
+const itemlist = document.querySelectorAll(".itemlist");
+
+Search.addEventListener("input", function () {
+
+    const searchValue = Search.value.toUpperCase();
+
+    itemlist.forEach(function (i) {
+
+        const text = i.innerText.toUpperCase();
+
+        if (text.includes(searchValue)) {
+            i.style.display = "block";
+        } else {
+            i.style.display = "none";
+        }
+
+    });
+
+});
+
+
+
 
 </script>
 </body>
