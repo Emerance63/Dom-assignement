@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <button>☰</button>
-                <h1>My Project</h1>
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-               <li><a>
-                <button>Services</button>
-                <ul>
-                    <li>Design</li>
-                    <li>Development</li>
+<body class="bg-white text-black transtition duration-300" id="body">
+    <header class="bg-gray-900 text-white p-4">
+        <nav class="flex justify-between items-center">
+            <h1 class="text-xl font-bold">My Project</h1>
+            <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
+            <ul id="navMenu"class="hidden lg:flex gap-6 items-center"> 
+                <li><a class="nav-link hover:blue-700">Home</a></li>
+                <li><a class="nav-link hover:blue-700">About</a></li>
+               <li class="relative"><a>
+                <button class="nav-link hover:blue-700" id="dropdownBtn">Services</button>
+                <ul id="dropdown" class="hidden absolute bg-gray-800 mt-2 p-2 rounded">
+                    <li class="p-2 hover:bg-gray-700">Design</li>
+                    <li class="p-2 hover:bg-gray-700">Development</li>
                 </ul>
             </a></li>
-            <li><a>Contact</a></li>
+            <li><a class="nav-link hover:blue-700">Contact</a></li>
             </ul>
+            <button id="toggleMode" class="bg-gray-800 text-white px-4 py-2 mt-3 rounded ml-3">Toggle </button>
         </nav>
-        <button>Toggle </button>
     </header>
 <section>
     <div>
@@ -33,10 +34,11 @@
     <div>
         <input type="text"placeholder="Enter something....">
         <button>Add</button>
+        <ul id="list" class="p-6 space-y-2 text-center"></ul>
     </div>
     <div>
         <input type="text" placeholder="search List....">
-        <ul>
+        <ul id="itemlist" class="p-6 space-y-2 text-center">
             <li>Kigali Convention Centre</li>
             <li>Nyandungu Eco Park</li>
             <li>Kigali Genocide Memorial</li>
@@ -44,26 +46,26 @@
             <li>Nyungwe Forest National Park</li>
         </ul>
     </div>
-    <div>
-        <div>
-            <h3>Kigali Convention Centre</h3>
+    <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" >
+        <div class="border p-4 rounded">
+            <h3 class="font-bold">Kigali Convention Centre</h3>
             <p></p>
             <button>Add</button>
         </div>
-        <div>
-            <h3>Nyandungu Eco Park</h3>
+        <div class="border p-4 rounded" >
+            <h3 class="font-bold">Nyandungu Eco Park</h3>
             <p></p>
-            <button>Add</button>
+            <button class="addCard bg-blue-500 text-white px-3 py-1 mt-2">Add</button>
         </div>
-        <div>
-            <h3>Kigali Genocide Memorial</h3>
+        <div class="border p-4 rounded">
+            <h3 class="font-bold">Kigali Genocide Memorial</h3>
             <p></p>
-            <button>Add</button>
+            <button class="addCard bg-blue-500 text-white px-3 py-1 mt-2">Add</button>
         </div>
-        <div>
-            <h3>Volcanoes National Park</h3>
+        <div class="border p-4 rounded">
+            <h3 class="font-bold">Volcanoes National Park</h3>
             <p></p>
-            <button>Add</button>
+            <button class="addCard bg-blue-500 text-white px-3 py-1 mt-2">Add</button>
         </div>
     </div>
 </section>
