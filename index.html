@@ -10,20 +10,20 @@
   </head>
 
   <body
-    class="bg-white text-black transtition duration-300"
+    class="bg-white text-black"
     id="body"
   >
-    <header class="bg-gray-900 text-white p-4">
+    <header class="bg-gray-900 text-white p-4 fixed top-0 left-0 right-0">
       <nav class="flex justify-between items-center">
-        <h1 class="text-xl font-bold">My Project</h1>
+        <h1 class="text-xl font-bold text-amber-500">My Project</h1>
 
         <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
 
         <ul id="navMenu" class="hidden lg:flex gap-6 items-center">
-          <li><a class="nav-link hover:text-green-700">Home</a></li>
+          <li><a class="nav-link hover:text-amber-500">Home</a></li>
 
           <li>
-            <a class="nav-link hover:text-green-700" href="#about">
+            <a class="nav-link hover:text-amber-500" href="#about">
               About
             </a>
           </li>
@@ -42,12 +42,12 @@
             </a>
           </li>
 
-          <li><a class="nav-link hover:text-green-700">Contact</a></li>
+          <li><a class="nav-link hover:text-amber-500">Contact</a></li>
         </ul>
 
         <button
           id="toggleMode"
-          class="bg-gray-800 text-white px-4 py-2 mt-3 rounded ml-3"
+          class="bg-gray-800 text-amber-500 px-4 py-2 mt-3 rounded ml-3"
         >
           Toggle
         </button>
@@ -55,6 +55,39 @@
     </header>
 
     <section>
+        <div class="bg-[url(/image/back.jpg)]">
+             <div class="p-6 text-center">
+        <h1
+          id="text"
+          class="text-3xl font-bold md:m-10 lg:m-20"
+        >
+          Things to Explore and know in rwanda
+        </h1>
+
+        <button
+          id="changeText"
+          class="bg-amber-500 text-white px-4 py-2 rounded ml-2 mb-2"
+        >
+          Change Text
+        </button>
+
+        <p id="about" class="flex md:justify-center">
+          <em class="text-bold">Rwanda </em>
+          is a beautiful country located in East Africa and is known as the
+          “Land of a Thousand Hills” because of its many green hills and
+          mountains. The country is famous for its cleanliness, safety,
+          wildlife, and rapid development. Its capital city, Kigali, is one
+          of the cleanest and most modern cities in Africa. Rwanda is well
+          known for tourism attractions such as gorilla trekking in Volcanoes
+          National Park, safaris in Akagera National Park, and beautiful
+          views at Lake Kivu. The people of Rwanda are friendly and value
+          peace, unity, and culture. Rwanda is also known for traditional
+          foods, coffee, tea, and cultural dances that attract visitors from
+          around the world.
+        </p>
+      </div>
+
+        </div>
       <div class="p-6 text-center">
         <h1
           id="text"
@@ -65,7 +98,7 @@
 
         <button
           id="changeText"
-          class="bg-green-600 text-white px-4 py-2 rounded ml-2 mb-2"
+          class="bg-amber-500 text-white px-4 py-2 rounded ml-2 mb-2"
         >
           Change Text
         </button>
@@ -96,7 +129,7 @@
 
         <button
           id="addText"
-          class="bg-green-600 text-white px-4 py-2 rounded ml-2"
+          class="bg-amber-500 text-white px-4 py-2 rounded ml-2"
           onclick="addSomething()"
         >
           Add
@@ -115,7 +148,7 @@
 
         <button
           id="searchBtn"
-          class="bg-green-600 text-white px-3 py-2 rounded"
+          class="bg-amber-500 text-white px-3 py-2 rounded"
         >
           Search
         </button>
@@ -131,41 +164,41 @@
 
       <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="border p-4 rounded">
-          <h3 class="font-bold">Kigali Convention Centre</h3>
+          <h3 class="font-bold m-3">Kigali Convention Centre</h3>
+<img src="/image/download 1.jpg"alt="convesstion center" class="w-80 h-40 rounded-xl">
+          <p class="text-center text-gray-600 m-3">The Kigali Convention Centre (KCC) is a premier,53,000-square-meter facility in Rwanda's capital, known for its distinctive dome design inspired by traditional Rwandan homes.</p>
 
-          <p></p>
-
-          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+          <button class="addCard bg-amber-500 text-white px-3 py-1 mt-2">
             Add
           </button>
         </div>
 
-        <div class="border p-4 rounded">
-          <h3 class="font-bold">Nyandungu Eco Park</h3>
+        <div class="border p-4 rounded shadow-xl">
+          <h3 class="font-bold m-3">Nyandungu Eco Park</h3>
+    <img src="/image/Nyandungu.jpg"alt="nyandungu park" class="w-80 h-40 rounded-xl">
+          <p class="text-center text-gray-600 m-3">Nyandungu Eco-Park is a 121-hectare restored wetland in Kigali, Rwanda, functioning as a premier urban eco-tourism destination</p>
 
-          <p></p>
-
-          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+          <button class="addCard bg-amber-500 text-white px-3 py-1 mt-8">
             Add
           </button>
         </div>
 
-        <div class="border p-4 rounded">
-          <h3 class="font-bold">Kigali Genocide Memorial</h3>
+        <div class="border p-4 rounded shadow-xl">
+          <h3 class="font-bold m-3">Compaign against genocide</h3>
+    <img src="/image/compaign against genocide.jpg"alt="compaign against genocide" class="w-80 h-40 rounded-xl">
+          <p class="text-center text-gray-600 m-3">The Campaign Against Genocide was a military operation (April–July 1994) led by the Rwandan Patriotic Army (RPA) to stop the 100-day genocide against the Tutsi.</p>
 
-          <p></p>
-
-          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+          <button class="addCard bg-amber-500 text-white px-3 py-1 mt-8">
             Add
           </button>
         </div>
 
-        <div class="border p-4 rounded">
-          <h3 class="font-bold">Volcanoes National Park</h3>
+        <div class="border p-4 rounded shadow-xl">
+          <h3 class="font-bold m-3">Volcanoes National Park</h3>
+   <img src="/image/gorillas.jpg"alt=" volcanoes" class="w-80 h-40 rounded-xl">
+          <p class="text-center text-gray-600 m-3">Volcanoes National Park, located in northwestern Rwanda, is a premier African conservation area renowned as a primary habitat for endangered mountain gorillas and golden monkeys</p>
 
-          <p></p>
-
-          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+          <button class="addCard bg-amber-500 text-white px-3 py-1 mt-2">
             Add
           </button>
         </div>
@@ -177,6 +210,15 @@
     </footer>
 
     <script>
+        const links = document.querySelectorAll(".nav-link");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    links.forEach(l => l.classList.remove("text-amber-500"));
+    link.classList.add("text-amber-500");
+  });
+});
+
       const dropdownBtn = document.getElementById("dropdownBtn");
       const dropdown = document.getElementById("dropdown");
 
@@ -266,7 +308,14 @@
         itemsToshow.splice(index, 1);
         renderList();
       }
-
+ const addCard = document.querySelectorAll(".addCard")
+ addCard.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const title = btn.parentElement.querySelector("h3");
+    title.innerText;
+    addItem(title);
+  });
+});
       
     </script>
   </body>
