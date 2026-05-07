@@ -19,7 +19,7 @@
                 <li><a class="nav-link hover:text-green-700" href="#about">About</a></li>
 
                <li class="relative"><a>
-                <button class="nav-link hover:text-green-700" id="dropdownBtn">Services</button>
+                <button id="dropdownBtn">Services</button>
                 <ul id="dropdown" class="hidden absolute bg-gray-800 mt-2 p-2 rounded">
                     <li class="p-2 hover:text-gray-700">Design</li>
                     <li class="p-2 hover:text-gray-700">Development</li>
@@ -88,5 +88,23 @@
 <footer class="bg-gray-900 text-white p-6 text-center">
     @2026   My project
 </footer>
+<script>
+    // const links =document.querySelectorAll(".nav-link");
+
+const dropdownBtn = document.getElementById("dropdownBtn");
+const dropdown = document.getElementById("dropdown");
+
+dropdownBtn.addEventListener("click", () => {
+  dropdown.classList.toggle("hidden");
+});
+
+const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("hidden")
+})
+
+</script>
 </body>
 </html>
