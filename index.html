@@ -125,6 +125,7 @@
         </ul>
       </div>
 
+     <ul id="list-1"></ul>
       <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="border p-4 rounded shadow-xl">
           <h3 class="font-bold m-3">Kigali Convention Centre</h3>
@@ -164,6 +165,7 @@
           <button class="addCard bg-amber-500 text-white px-3 py-1 mt-2">
             Add
           </button>
+        
         </div>
       </div>
     </section>
@@ -274,13 +276,28 @@ links.forEach(link => {
 
       const addCard = document.querySelectorAll(".addCard");
 
-      addCard.forEach((btn) => {
-       btn.addEventListener("click", () => {
+addCard.forEach((btn) => {
+  btn.addEventListener("click", function () {
 
-        const title =
+    const title =
       btn.parentElement.querySelector("h3").innerText;
 
-    addItem(title);
+    // display inside list-1
+    const listOne = document.getElementById("list-1");
+
+    const li = document.createElement("li");
+
+    li.className =
+      "bg-amber-700/30 text-white text-center p-2 rounded mt-2 cursor-pointer";
+
+    li.innerText = title;
+
+    // remove when clicked
+    li.addEventListener("click", function () {
+      li.remove();
+    });
+
+    listOne.appendChild(li);
   });
 });
       
