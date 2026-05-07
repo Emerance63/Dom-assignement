@@ -1,158 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-black transtition duration-300" id="body">
+
+  </head>
+
+  <body
+    class="bg-white text-black transtition duration-300"
+    id="body"
+  >
     <header class="bg-gray-900 text-white p-4">
-        <nav class="flex justify-between items-center">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-xl font-bold">My Project</h1>
 
-            <h1 class="text-xl font-bold">My Project</h1>
+        <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
 
-            <button id="menuBtn" class="lg:hidden text-2xl">☰</button>
+        <ul id="navMenu" class="hidden lg:flex gap-6 items-center">
+          <li><a class="nav-link hover:text-green-700">Home</a></li>
 
-            <ul id="navMenu"class="hidden lg:flex gap-6 items-center"> 
-                <li><a class="nav-link hover:text-green-700">Home</a></li>
-                <li><a class="nav-link hover:text-green-700" href="#about">About</a></li>
+          <li>
+            <a class="nav-link hover:text-green-700" href="#about">
+              About
+            </a>
+          </li>
 
-               <li class="relative"><a>
-                <button id="dropdownBtn">Services</button>
-                <ul id="dropdown" class="hidden absolute bg-gray-800 mt-2 p-2 rounded">
-                    <li class="p-2 hover:text-gray-700">Design</li>
-                    <li class="p-2 hover:text-gray-700">Development</li>
-                </ul>
-            </a></li>
+          <li class="relative">
+            <a>
+              <button id="dropdownBtn">Services</button>
 
-            <li><a class="nav-link hover:text-green-700">Contact</a></li>
-            </ul>
-            <button id="toggleMode" class="bg-gray-800 text-white px-4 py-2 mt-3 rounded ml-3">Toggle </button>
-        </nav>
+              <ul
+                id="dropdown"
+                class="hidden absolute bg-gray-800 mt-2 p-2 rounded"
+              >
+                <li class="p-2 hover:text-gray-700">Design</li>
+                <li class="p-2 hover:text-gray-700">Development</li>
+              </ul>
+            </a>
+          </li>
+
+          <li><a class="nav-link hover:text-green-700">Contact</a></li>
+        </ul>
+
+        <button
+          id="toggleMode"
+          class="bg-gray-800 text-white px-4 py-2 mt-3 rounded ml-3"
+        >
+          Toggle
+        </button>
+      </nav>
     </header>
-<section>
-    <div class="p-6 text-center">
-        <h1 id="text" class="text-3xl font-bold md:m-10 lg:m-20">Things to Explore and know in rwanda </h1>
-        <button  id="changeText"class="bg-green-600 text-white px-4 py-2 rounded ml-2 mb-2">Change Text</button>
-<p id="about"lass="flex md:justify-center"> <em class="text-bold">Rwanda </em>is a beautiful country located in East Africa and
-     is known as the “Land of a Thousand Hills” because of its
-      many green hills and mountains. The country is famous for
-       its cleanliness, safety, wildlife, and rapid development. Its 
-       capital city, Kigali, is one of the cleanest and most modern 
-       cities in Africa. Rwanda is well known for tourism attractions
-       such as gorilla trekking in Volcanoes National Park, safaris in 
-       Akagera National Park, and beautiful views at Lake Kivu. The people
-        of Rwanda are friendly and value peace, unity, and culture. Rwanda is
-         also known for traditional foods, coffee, tea, and cultural dances that
-          attract visitors from around the world.</p>
-    </div>
-    <div class="p-6 text-center">
-        <input type="text"placeholder="Enter something...."  class="border p-2 rounded w-full max-w-md">
-        <button id="addText" class="bg-green-600 text-white px-4 py-2 rounded ml-2">Add</button>
+
+    <section>
+      <div class="p-6 text-center">
+        <h1
+          id="text"
+          class="text-3xl font-bold md:m-10 lg:m-20"
+        >
+          Things to Explore and know in rwanda
+        </h1>
+
+        <button
+          id="changeText"
+          class="bg-green-600 text-white px-4 py-2 rounded ml-2 mb-2"
+        >
+          Change Text
+        </button>
+
+        <p id="about" class="flex md:justify-center">
+          <em class="text-bold">Rwanda </em>
+          is a beautiful country located in East Africa and is known as the
+          “Land of a Thousand Hills” because of its many green hills and
+          mountains. The country is famous for its cleanliness, safety,
+          wildlife, and rapid development. Its capital city, Kigali, is one
+          of the cleanest and most modern cities in Africa. Rwanda is well
+          known for tourism attractions such as gorilla trekking in Volcanoes
+          National Park, safaris in Akagera National Park, and beautiful
+          views at Lake Kivu. The people of Rwanda are friendly and value
+          peace, unity, and culture. Rwanda is also known for traditional
+          foods, coffee, tea, and cultural dances that attract visitors from
+          around the world.
+        </p>
+      </div>
+
+      <div class="p-6 text-center">
+        <input
+          type="text"
+          placeholder="Enter something...."
+          class="border p-2 rounded w-full max-w-md"
+          id="Search"
+        />
+
+        <button
+          id="addText"
+          class="bg-green-600 text-white px-4 py-2 rounded ml-2"
+          onclick="addSomething()"
+        >
+          Add
+        </button>
+
         <ul id="list" class="p-6 space-y-2 text-center"></ul>
-    </div>
-    <div class="p-6 text-center">
-        <input id="search" type="text" placeholder="search List...."  
-class="border p-2 rounded w-full max-w-md">
+      </div>
 
-<button 
-id="searchBtn"
-class="bg-green-600 text-white px-3 py-2 rounded">
-Search
-</button>
+      <div class="p-6 text-center">
+        <input
+          id="search"
+          type="text"
+          placeholder="search List...."
+          class="border p-2 rounded w-full max-w-md"
+        />
 
-<ul id="itemul" class="p-6 space-y-2 text-center">
-    <li class="itemlist">Kigali Convention Centre</li>
-    <li class="itemlist">Nyandungu Eco Park</li>
-    <li class="itemlist">Kigali Genocide Memorial</li>
-    <li class="itemlist">Volcanoes National Park</li>
-    <li class="itemlist">Nyungwe Forest National Park</li>
-</ul>
-    </div>
-    <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4" >
+        <button
+          id="searchBtn"
+          class="bg-green-600 text-white px-3 py-2 rounded"
+        >
+          Search
+        </button>
+
+        <ul id="itemul" class="p-6 space-y-2 text-center">
+          <li class="itemlist">Kigali Convention Centre</li>
+          <li class="itemlist">Nyandungu Eco Park</li>
+          <li class="itemlist">Kigali Genocide Memorial</li>
+          <li class="itemlist">Volcanoes National Park</li>
+          <li class="itemlist">Nyungwe Forest National Park</li>
+        </ul>
+      </div>
+
+      <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="border p-4 rounded">
-            <h3 class="font-bold">Kigali Convention Centre</h3>
-            <p></p>
-            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
+          <h3 class="font-bold">Kigali Convention Centre</h3>
+
+          <p></p>
+
+          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+            Add
+          </button>
         </div>
-        <div class="border p-4 rounded" >
-            <h3 class="font-bold">Nyandungu Eco Park</h3>
-            <p></p>
-            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
-        </div>
+
         <div class="border p-4 rounded">
-            <h3 class="font-bold">Kigali Genocide Memorial</h3>
-            <p></p>
-            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
+          <h3 class="font-bold">Nyandungu Eco Park</h3>
+
+          <p></p>
+
+          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+            Add
+          </button>
         </div>
+
         <div class="border p-4 rounded">
-            <h3 class="font-bold">Volcanoes National Park</h3>
-            <p></p>
-            <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">Add</button>
+          <h3 class="font-bold">Kigali Genocide Memorial</h3>
+
+          <p></p>
+
+          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+            Add
+          </button>
         </div>
-    </div>
-</section>
-<footer class="bg-gray-900 text-white p-6 text-center">
-    @2026   My project
-</footer>
-<script>
-    // const links =document.querySelectorAll(".nav-link");
 
-const dropdownBtn = document.getElementById("dropdownBtn");
-const dropdown = document.getElementById("dropdown");
+        <div class="border p-4 rounded">
+          <h3 class="font-bold">Volcanoes National Park</h3>
 
-dropdownBtn.addEventListener("click", () => {
-  dropdown.classList.toggle("hidden");
-});
+          <p></p>
 
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+          <button class="addCard bg-green-600 text-white px-3 py-1 mt-2">
+            Add
+          </button>
+        </div>
+      </div>
+    </section>
 
-menuBtn.addEventListener("click", function () {
-    navMenu.classList.toggle("hidden")
-})
+    <footer class="bg-gray-900 text-white p-6 text-center">
+      @2026 My project
+    </footer>
 
-const text = document.getElementById("text");
-const changeText =document.getElementById("changeText");
+    <script>
+      const dropdownBtn = document.getElementById("dropdownBtn");
+      const dropdown = document.getElementById("dropdown");
 
-changeText.addEventListener("click", function () {
-    text.innerText = "Welcome to rwanda.";
-})
+      dropdownBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+      });
 
-const toggleMode = document.getElementById("toggleMode");
-const Body = document.getElementById("body");
+      const menuBtn = document.getElementById("menuBtn");
+      const navMenu = document.getElementById("navMenu");
 
-toggleMode.addEventListener("click", function (){
-Body.classList.toggle("bg-black");
-Body.classList.toggle("text-white");
+      menuBtn.addEventListener("click", function () {
+        navMenu.classList.toggle("hidden");
+      });
 
-})
+      const text = document.getElementById("text");
+      const changeText = document.getElementById("changeText");
 
-const Search = document.getElementById("search");
-const itemlist = document.querySelectorAll(".itemlist");
+      changeText.addEventListener("click", function () {
+        text.innerText = "Welcome to rwanda.";
+      });
 
-Search.addEventListener("input", function () {
+      const toggleMode = document.getElementById("toggleMode");
+      const Body = document.getElementById("body");
 
-    const searchValue = Search.value.toUpperCase();
+      toggleMode.addEventListener("click", function () {
+        Body.classList.toggle("bg-black");
+        Body.classList.toggle("text-white");
+      });
 
-    itemlist.forEach(function (i) {
+      const Search = document.getElementById("search");
+      const itemlist = document.querySelectorAll(".itemlist");
 
-        const text = i.innerText.toUpperCase();
+      Search.addEventListener("input", function () {
+        const searchValue = Search.value.toUpperCase();
 
-        if (text.includes(searchValue)) {
+        itemlist.forEach(function (i) {
+          const text = i.innerText.toUpperCase();
+
+          if (text.includes(searchValue)) {
             i.style.display = "block";
-        } else {
+          } else {
             i.style.display = "none";
+          }
+        });
+      });
+
+      let itemsToshow = [];
+
+      function renderList() {
+        let showUl = document.getElementById("list");
+        showUl.innerHTML = "";
+
+        itemsToshow.forEach((item, index) => {
+          let li = document.createElement("li");
+          li.className = "flex justify-center items-center gap-2";
+
+          li.innerHTML = `
+            <span>${item}</span>
+
+            <button
+              class="bg-red-600 text-white px-2 py-1 rounded"
+              onclick="deleteItem(${index})"
+            >
+              Delete
+            </button>
+          `;
+
+          showUl.appendChild(li);
+        });
+      }
+
+      function addSomething() {
+        let inputElement = document.getElementById("Search");
+
+        if (!inputElement.value) {
+          return alert("Something is missing");
         }
 
-    });
+        itemsToshow.push(inputElement.value);
 
-});
+        renderList();
 
+        inputElement.value = "";
+      }
 
+      function deleteItem(index) {
+        itemsToshow.splice(index, 1);
+        renderList();
+      }
 
-
-</script>
-</body>
+      
+    </script>
+  </body>
 </html>
