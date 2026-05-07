@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Things to Explore in Rwanda</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
   </head>
 
   <body
-    class="bg-white text-black"
+    class="bg-orange-50 text-black"
     id="body"
   >
     <header class="bg-gray-900 text-white p-4 fixed top-0 left-0 right-0">
@@ -49,77 +49,40 @@
           id="toggleMode"
           class="bg-gray-800 text-amber-500 px-4 py-2 mt-3 rounded ml-3"
         >
-          Toggle
+          Mode
         </button>
       </nav>
     </header>
 
     <section>
-        <div class="bg-[url(/image/back.jpg)]">
-             <div class="p-6 text-center">
+        
+             <div class="p-6 text-center bg-[url(image/rwanda-1.jpg)] bg-no-repeat bg-cover">
         <h1
           id="text"
-          class="text-3xl font-bold md:m-10 lg:m-20"
+          class="text-5xl font-bold py-20 md:m-10 lg:mt-40"
         >
-          Things to Explore and know in rwanda
+          Things to Explore and know in Rwanda
         </h1>
 
         <button
           id="changeText"
-          class="bg-amber-500 text-white px-4 py-2 rounded ml-2 mb-2"
+          class="bg-amber-500 text-white px-4 py-2 rounded ml-2 mb-5 mt-5"
         >
           Change Text
         </button>
-
-        <p id="about" class="flex md:justify-center">
-          <em class="text-bold">Rwanda </em>
-          is a beautiful country located in East Africa and is known as the
-          “Land of a Thousand Hills” because of its many green hills and
-          mountains. The country is famous for its cleanliness, safety,
-          wildlife, and rapid development. Its capital city, Kigali, is one
-          of the cleanest and most modern cities in Africa. Rwanda is well
-          known for tourism attractions such as gorilla trekking in Volcanoes
-          National Park, safaris in Akagera National Park, and beautiful
-          views at Lake Kivu. The people of Rwanda are friendly and value
-          peace, unity, and culture. Rwanda is also known for traditional
-          foods, coffee, tea, and cultural dances that attract visitors from
-          around the world.
+         <h2 class="text-3xl m-15">Rwanda </h2>
+        <p id="about" class="flex items-center p-5 text-2xl md:justify-center m-5">
+          is a beautiful country located in East Africa and is known as the<br>
+          “Land of a Thousand Hills” because of its many green hills and<br>
+          mountains. The country is famous for its cleanliness, safety,<br>
+          wildlife, and rapid development. 
         </p>
       </div>
 
-        </div>
-      <div class="p-6 text-center">
-        <h1
-          id="text"
-          class="text-3xl font-bold md:m-10 lg:m-20"
-        >
-          Things to Explore and know in rwanda
-        </h1>
-
-        <button
-          id="changeText"
-          class="bg-amber-500 text-white px-4 py-2 rounded ml-2 mb-2"
-        >
-          Change Text
-        </button>
-
-        <p id="about" class="flex md:justify-center">
-          <em class="text-bold">Rwanda </em>
-          is a beautiful country located in East Africa and is known as the
-          “Land of a Thousand Hills” because of its many green hills and
-          mountains. The country is famous for its cleanliness, safety,
-          wildlife, and rapid development. Its capital city, Kigali, is one
-          of the cleanest and most modern cities in Africa. Rwanda is well
-          known for tourism attractions such as gorilla trekking in Volcanoes
-          National Park, safaris in Akagera National Park, and beautiful
-          views at Lake Kivu. The people of Rwanda are friendly and value
-          peace, unity, and culture. Rwanda is also known for traditional
-          foods, coffee, tea, and cultural dances that attract visitors from
-          around the world.
-        </p>
-      </div>
+       
 
       <div class="p-6 text-center">
+        <h1 class="font-bold text-lg m-5 p-5">Add to Your List</h1>
         <input
           type="text"
           placeholder="Enter something...."
@@ -137,13 +100,13 @@
 
         <ul id="list" class="p-6 space-y-2 text-center"></ul>
       </div>
-
+     <h1 class="font-bold text-lg m-5 p-5 text-center">Search Attractions</h1>
       <div class="p-6 text-center">
         <input
           id="search"
           type="text"
           placeholder="search List...."
-          class="border p-2 rounded w-full max-w-md"
+          class="border px-4 py-2 ml-2rounded w-full max-w-md"
         />
 
         <button
@@ -163,7 +126,7 @@
       </div>
 
       <div class="p-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="border p-4 rounded">
+        <div class="border p-4 rounded shadow-xl">
           <h3 class="font-bold m-3">Kigali Convention Centre</h3>
 <img src="/image/download 1.jpg"alt="convesstion center" class="w-80 h-40 rounded-xl">
           <p class="text-center text-gray-600 m-3">The Kigali Convention Centre (KCC) is a premier,53,000-square-meter facility in Rwanda's capital, known for its distinctive dome design inspired by traditional Rwandan homes.</p>
@@ -237,7 +200,7 @@ links.forEach(link => {
       const changeText = document.getElementById("changeText");
 
       changeText.addEventListener("click", function () {
-        text.innerText = "Welcome to rwanda.";
+        text.innerText = "Welcome to Rwanda.";
       });
 
       const toggleMode = document.getElementById("toggleMode");
@@ -308,11 +271,15 @@ links.forEach(link => {
         itemsToshow.splice(index, 1);
         renderList();
       }
- const addCard = document.querySelectorAll(".addCard")
- addCard.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const title = btn.parentElement.querySelector("h3");
-    title.innerText;
+
+      const addCard = document.querySelectorAll(".addCard");
+
+      addCard.forEach((btn) => {
+       btn.addEventListener("click", () => {
+
+        const title =
+      btn.parentElement.querySelector("h3").innerText;
+
     addItem(title);
   });
 });
